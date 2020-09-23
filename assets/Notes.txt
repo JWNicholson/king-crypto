@@ -1,0 +1,87 @@
+Goal:
+Chart and show selected crypto currency data for various brands.
+Landing page - panel list of 3 default coins.
+\\user can add or delete coins
+\\app keeps users selected coins for his return visit
+
+Coin Data page - chart of historical data -
+\\\user select 24hr, 30days, 1 year
+\\Panel data of 6 ( 3 over 3) data points with titles
+\\\\   Market Cap, Price, Volume 24hr, Circulating Supply, Change 24hr
+\\\\  Numbers green if increased, red if decreased or negative
+
+
+
+UPER
+U-P
+1. GET data from api. 
+    //axios. will need multiple requests. Data requests rely on coin selction and data.
+
+    Show default coins or user selections on landing page. 
+    
+    User can add or delete coins.
+    //filter out coin
+
+2. Click on coin panel takes user to Coin data page.
+    // react router
+
+3. Coin data page graph is fed data from api, as is data panel below graph.
+    // map through GET response
+
+4. User can choose graph data 1 year, 30days, 24hr.
+    // button selection, used as parameter for GET
+
+5. User can return to landing page via link.
+    //react router. Home icon
+
+6. Users choices still there.
+    //local storage
+
+7. Analysis - components will need to share data. Use react context. Use State
+
+
+
+########################################################
+Modules
+api config
+chart config
+context 
+pages
+
+
+src -app
+    - Index
+    |
+     _ coinsApi
+
+     _ chartConfig
+    
+     - context
+        - coinsContext
+
+     - components
+        - AddCoins
+        - Coin
+        - CoinData
+        - Coin Chart
+        - CoinList
+
+    - pages
+        - CoinSpecifics
+        - CoinSynopsis
+
+
+    #######################
+    Uses state-
+    AddCoins
+    CoinChart
+    CoinList
+    coinwatchContext
+    coinSpecifics
+    coinSynopsis
+
+    ##################################
+    Steps
+    1. initiate both pages
+    2. use router to connect pages
+    
