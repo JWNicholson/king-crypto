@@ -87,4 +87,4 @@ src -app
     3. import AddCoins and CoinList into CoinSynopsis
     4. set up api call in CoinList
     5. check call success by console.log the response
-    6. 
+    6. If call success, set up context file
