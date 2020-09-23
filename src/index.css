@@ -62,6 +62,13 @@ body {
 	height:auto;
 }
 
+.app {
+	background: #141414;
+	height: 100vh;
+	padding: 2em;
+
+	color:aliceblue;
+}
 
 
 

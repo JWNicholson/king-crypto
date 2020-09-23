@@ -84,4 +84,7 @@ src -app
     Steps
     1. initiate both pages
     2. use router to connect pages
-    
+    3. import AddCoins and CoinList into CoinSynopsis
+    4. set up api call in CoinList
+    5. check call success by console.log the response
+    6. 

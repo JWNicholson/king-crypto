@@ -10,7 +10,7 @@ const Header = () => {
                 justifyContent="center"   
             >
                 <a href="/">
-                    <Typography variant="h3" component="h1">
+                    <Typography variant="h3" component="h1" gutterBottom>
                         King Crypto
                     </Typography>
                 </a>
