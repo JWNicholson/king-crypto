@@ -57,17 +57,17 @@ body {
   }
 
   img.coinlist-image {
-	
-	width: 90px;
+	margin: 1em;
+	width: 50px;
 	height:auto;
 }
 
 .app {
 	background: #141414;
 	height: 100vh;
-	padding: 2em;
+	padding: 0.2em;
 
-	color:aliceblue;
+	color:white;
 }
 
 
