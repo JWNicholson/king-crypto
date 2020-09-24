@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ImCircleDown, ImCircleUp } from 'react-icons/im';
-import {Box, Grid, makeStyles, Paper, Typography,} from '@material-ui/core';
+import {Box, Grid, makeStyles, Button, Typography,} from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
         background:"#f8f8ff",
         color:"#141414",
-        maxWidth:"900px",
+        maxWidth:"322px",
         margin:"auto",
         marginTop:theme.spacing(2),
         borderRadius:"4px",
@@ -26,39 +26,47 @@ const useStyles = makeStyles((theme) => ({
    coinlistImage:{
        height:"60px",
        width:"auto",
-       marginRight:theme.spacing(2),
+       marginRight:theme.spacing(1),
    },
    coinImageContainer:{
-        marginRight:theme.spacing(2),
+        marginRight:theme.spacing(1),
 
    },
     currentPriceBox: {
       color:"#141414",
-      marginRight:theme.spacing(2),
+      marginRight:theme.spacing(1),
+    },
+    currentPercentageContainer:{
+        display:"flex",
     },
     currentPercentage:{
-        marginRight:"0",
+        marginTop:theme.spacing(1),
+        marginRight:theme.spacing(1),
     },
     percentageArrow:{
+        
         marginRight:theme.spacing(1),
-    }
+    },
+    deleteIconContainer:{
+       display:"flex",
+       justifyContent:"flex-end",
+    },
+  
+    
 }));
 
-const Coin = ({coin}) => {
+const Coin = ({coin,deleteCoin}) => {
     const classes = useStyles();
 
-    return (
-        
-            
-        <Grid container xs={6}  className={classes.root} display="flex" flexDirection="row" >
+    return (  
+        <Grid container xs={12}  className={classes.root} display="flex" flexDirection="row" >
           <Link to={"/styx"} >
             <Box xs={12} className={classes.contentWrapper} >
-                <Grid xs={4} item justifyContent="center" alignContent="center" className={classes.coinImageContainer}>
+                <Grid xs={3} item justifyContent="center" alignContent="center" className={classes.coinImageContainer}>
                 <img className={classes.coinlistImage} src={coin.image} alt="coin logo" />
                 </Grid>
-                
                 <Grid item
-                    xs={4}
+                    xs={3}
                     className={classes.currentPriceBox}
                     display="flex"
                     flexDirection="row"
@@ -67,22 +75,27 @@ const Coin = ({coin}) => {
                     <Typography ><strong>Current Price</strong></Typography>
                     <Typography>{coin.current_price}</Typography>
                 </Grid>
-                
-                <Grid item xs={4} >
+                <Grid item xs={5} className={classes.currentPercentageContainer}>
                     <Box 
                         className={classes.currentPercentage}
                         color={coin.price_change_percentage_24h < 0 ? "error.main" : "success.dark"}>
                     {coin.price_change_percentage_24h < 0 ?   
                 <ImCircleDown className={classes.percentageArrow} /> : <ImCircleUp className={classes.percentageArrow}  />} 
-                {coin.price_change_percentage_24h}
+                {coin.price_change_percentage_24h}%
                  </Box>
                 </Grid>
-
+                <Grid item xs={1} className={classes.deleteIconContainer}>
+                <Typography 
+                    onClick={(e) => {
+                        e.preventDefault();
+                        deleteCoin(coin.id);
+                        console.log("Delete clicked")
+                    }}
+                variant="h4" color="secondary" className={classes.deleteIcon} >&#10008;</Typography>
+                </Grid>
             </Box>
           </Link>
         </Grid>
-           
-        
     );
 }
 

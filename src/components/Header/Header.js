@@ -19,13 +19,9 @@ const Header = () => {
                 display="flex"
                 justifyContent="center"   
             >
-             
-            
             <Typography  variant="h3" component="h1" gutterBottom>
                King Crypto
-           </Typography>
-          
-                
+           </Typography>  
             </Box>
         </header>
     )

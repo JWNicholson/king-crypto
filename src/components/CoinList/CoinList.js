@@ -25,7 +25,7 @@ const CoinList = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     //destructure from context
-    const { coinWatch } = useContext(CoinWatchContext);
+    const { coinWatch,deleteCoin } = useContext(CoinWatchContext);
     console.log(coinWatch)
 
     useEffect(() => {
@@ -46,7 +46,7 @@ const CoinList = () => {
         }
         getCoinData();
        
-    }, []);
+    }, [coinWatch]);//re-run when watchList updates, like when deleting or adding a coin
 
     const renderCoins = () => {     
             if(isLoading) {
@@ -68,7 +68,8 @@ const CoinList = () => {
                             return (
                                 <Coin 
                                     key={coin.id}
-                                    coin={coin}    
+                                    coin={coin}
+                                    deleteCoin={deleteCoin}    
                                 />
                             );
                            
