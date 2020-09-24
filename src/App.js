@@ -8,7 +8,9 @@ import { CoinWatchContextProvider } from './context/coinwatchContext';
 
 
 const useStyles = makeStyles((theme) => ({
- 
+ Container:{
+   border:"3px solid pink"
+ }
 }))
 
 function App() {

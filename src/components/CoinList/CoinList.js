@@ -44,7 +44,10 @@ const CoinList = () => {
             //reset isLoading
             setIsLoading(false);
         }
-        getCoinData();
+
+        if (coinWatch.length > 0){
+            getCoinData();
+        }else setCoins([]);//reset or one coin will remain on page when deleting coins because when the array is empty, watchList doesn't trigger useEffect, so screen doesnt't update
        
     }, [coinWatch]);//re-run when watchList updates, like when deleting or adding a coin
 
@@ -55,8 +58,6 @@ const CoinList = () => {
                     <CircularProgress color="secondary"/>
                     </div>
                 )};
-
-
 
                 return (
                 <Grid

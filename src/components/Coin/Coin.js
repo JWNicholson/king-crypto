@@ -59,18 +59,15 @@ const Coin = ({coin,deleteCoin}) => {
     const classes = useStyles();
 
     return (  
-        <Grid container xs={12}  className={classes.root} display="flex" flexDirection="row" >
-          <Link to={"/styx"} >
-            <Box xs={12} className={classes.contentWrapper} >
-                <Grid xs={3} item justifyContent="center" alignContent="center" className={classes.coinImageContainer}>
+        <Grid   className={classes.root}  >
+          <Link to={`/coins/${coin.id}`} >
+            <Box xs={12} md={6} className={classes.contentWrapper} >
+                <Grid xs={3} item  className={classes.coinImageContainer}>
                 <img className={classes.coinlistImage} src={coin.image} alt="coin logo" />
                 </Grid>
                 <Grid item
                     xs={3}
-                    className={classes.currentPriceBox}
-                    display="flex"
-                    flexDirection="row"
-                    alignItems="center"
+                    className={classes.currentPriceBox}  
                 >
                     <Typography ><strong>Current Price</strong></Typography>
                     <Typography>{coin.current_price}</Typography>
