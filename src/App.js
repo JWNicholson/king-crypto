@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { Container, makeStyles } from '@material-ui/core';
 import Header from '../src/components/Header/Header';
 import CoinSynopsis from '../src/pages/CoinSynopsis';
-import CoinSpecifics from '../src/pages/CoinSpecifics';
+import CoinSpecifics from './pages/CoinSpecifics';
 import { CoinWatchContextProvider } from './context/coinwatchContext';
 
 
