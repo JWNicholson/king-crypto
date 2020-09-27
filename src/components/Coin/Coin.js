@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import DeleteOutlineTwoToneIcon from '@material-ui/icons/DeleteOutlineTwoTone';
-import { Box, Card, CardContent, makeStyles, Button, Typography, } from '@material-ui/core';
+import { Box, Card, CardContent, makeStyles, Typography, } from '@material-ui/core';
 
 
 const useStyles = makeStyles(() => ({
@@ -36,7 +36,7 @@ const useStyles = makeStyles(() => ({
     contentBox2: {
         display: "flex",
         flexFlow: "row nowrap",
-        color: "green",
+       
     },
     deletIconBox: {
         color: "red",
@@ -69,15 +69,15 @@ const Coin = ({ coin, deleteCoin }) => {
 
                     <CardContent className={classes.content}>
                         <Box className={classes.contentBox2}
-
                             color={coin.price_change_percentage_24h < 0 ? "error.main" : "success.dark"}
-
                         >
-                            <Typography>
-                                <span>
+                            <Typography
+                                // color={coin.price_change_percentage_24h < 0 ? "error.main" : "success.dark"}
+                            >
                                     {coin.price_change_percentage_24h < 0 ?
                                         <ArrowDownwardIcon /> : <ArrowUpwardIcon />}
-                                </span>  {coin.price_change_percentage_24h}%</Typography>
+                                {coin.price_change_percentage_24h}%
+                                </Typography>
                         </Box>
                     </CardContent>
 

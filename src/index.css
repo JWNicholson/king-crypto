@@ -53,22 +53,15 @@ table {
 
 body {
 	font-family: 'Roboto', 'Oxygen',
-	  'Ubuntu', 'Cantarell',sans-serif;
-	 
+	  'Ubuntu', 'Cantarell',sans-serif;	
+	  background: #141414;
   }
-
-  img.coinlist-image {
-	margin: 1em;
-	width: 50px;
-	height:auto;
-}
 
 .app {
 	background: #141414;
-	height: 100vh;
 	padding: 0.2em;
-
-	color:white;
+    height: 100vh;
+	color:#f8f8ff;
 }
 
 a:visited {

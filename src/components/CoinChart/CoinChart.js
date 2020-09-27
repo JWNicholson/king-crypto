@@ -1,13 +1,15 @@
 import React, { useEffect,useRef, useState } from 'react';
 import Chartjs from 'chart.js';
-import { Box, Typography,Button, ButtonGroup, Paper } from '@material-ui/core';
+import { Grid, Typography,Button, ButtonGroup, Container } from '@material-ui/core';
 import { historyOptions } from '../../chartConfig/chartConfig';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles= makeStyles((theme) => ({
   root: {
-      margin:"28px 0",
-      padding:"18px",
+      margin:"auto 0",
+      padding:"8px",
+      background:"#f8f8ff",
+      borderRadius:"4px",
   }
 }));
 
@@ -60,7 +62,7 @@ const CoinChart = ({data}) => {
       if (detail) {
         return (
           <>
-          <Typography variant="body2" gutterBottom>
+          <Typography variant="body2" gutterBottom color="textPrimary">
             Current price: {detail.current_price.toFixed(2)}
           </Typography>
 
@@ -74,22 +76,22 @@ const CoinChart = ({data}) => {
     }
 
     return (
-      <Paper className={classes.root}>
-        <Box   >
+      <Grid className={classes.root}>
+        <Grid container item   >
             <div>{renderPrice()}</div>
         <div>
             <canvas ref={chartRef} id="historyChart" width={300} height={400}></canvas>
         </div>
 
         
-        <ButtonGroup color="textSecondary" aria-label="outlined secondary button group">
+        <ButtonGroup disableElevation="true" variant="contained" color="primary" aria-label="contained primary button group">
         <Button onClick={() => setFormatTime("24")}>24h</Button>
         <Button onClick={() => setFormatTime("7d")}>1 week</Button>
         <Button onClick={() => setFormatTime("1y")}>1 year</Button>
         </ButtonGroup>
 
-        </Box>
-        </Paper>
+        </Grid>
+       </Grid>
     )
 }
 
