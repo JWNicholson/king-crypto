@@ -5,19 +5,12 @@ import { historyOptions } from '../../chartConfig/chartConfig';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles= makeStyles((theme) => ({
-  // root: {
-  //     margin:"auto 0",
-  //     padding:"8px",
-  //     background:"#f8f8ff",
-  //     borderRadius:"4px",
+  root: {
+      margin:"auto 0",
+      padding:"8px",
+      background:"#f8f8ff",
+      borderRadius:"4px",
    
-  // },
-  paper: {
-    background:"#f8f8ff",
-    padding:"16px",
-    display:"flex",
-    flexDirection:"column",
-    alignItems:"center",
   },
   chartControls:{
     display:"flex",
@@ -74,31 +67,31 @@ const CoinChart = ({data}) => {
     const renderPrice = () => {
       if (detail) {
         return (
-        
+          <Grid container>
 
-      <Grid item xs={12} >  
+            <Grid item className={classes.chartControls}>
           <Typography variant="body2" gutterBottom color="textPrimary">
             Current price: {detail.current_price.toFixed(2)}
           </Typography>
+         
           <Typography variant="body2" gutterBottom
             color={(detail.price_change_24h < 0 ? "error" : "textPrimary")}>
             24hr price change: {detail.price_change_24h.toFixed(2)}%
           </Typography>
-      </Grid>
+          </Grid>
+          </Grid>
         )
       }
     }
 
     return (
-    
-        <div className={classes.paper}>
+      <Grid className={classes.root}>
         <Grid container item  className={classes.chartControls} >
             <div>{renderPrice()}</div>
 
-        <Grid item x2={12}  >
-            <canvas ref={chartRef} id="historyChart" width={300} ></canvas>
-            {/* <canvas ref={chartRef} id="historyChart" ></canvas> */}
-        </Grid>
+        <div>
+            <canvas ref={chartRef} id="historyChart" width={300} height={400}></canvas>
+        </div>
 
         
         <ButtonGroup disableElevation="true" variant="contained" color="primary" aria-label="contained primary button group">
@@ -108,9 +101,8 @@ const CoinChart = ({data}) => {
         </ButtonGroup>
 
         </Grid>
-        </div>
-     
-    );
+       </Grid>
+    )
 }
 
 export default CoinChart;

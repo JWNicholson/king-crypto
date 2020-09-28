@@ -4,7 +4,7 @@ import CoinChart from '../components/CoinChart/CoinChart';
 import CoinData from '../components/CoinData/CoinData';
 import coinApi from '../api/coinApi';
 import axios from 'axios';
-import { Grid } from '@material-ui/core';
+import { Container, Grid } from '@material-ui/core';
 
 const CoinDetails = () => {
     const { id } = useParams();
@@ -76,10 +76,14 @@ const CoinDetails = () => {
         }
 
 		return (
-			<Grid xs={12} item container>
+            <>
+           
+			<Grid   item container>
 				<CoinChart data={coinData} />
 				<CoinData data={coinData.detail} />
 			</Grid>
+           
+            </>
 		);
 	};
 
