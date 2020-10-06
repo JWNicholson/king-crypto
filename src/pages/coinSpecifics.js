@@ -78,7 +78,7 @@ const CoinDetails = () => {
 		return (
             <>
            
-			<Grid   item container>
+			<Grid item container>
 				<CoinChart data={coinData} />
 				<CoinData data={coinData.detail} />
 			</Grid>

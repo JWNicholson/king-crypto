@@ -4,15 +4,17 @@ import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(() => ({
 	root: {
-		marginTop: "2rem"
+		margin: "2rem auto",
+		width:"330px",
+		
 	},
 	content: {
 		flex: '1 0 auto',
 	},
 
-	dataCard:{
-		width:"100%",
-		marginTop:"1rem",
+	dataCard: {
+		width: "100%",
+		marginTop: "1rem",
 	},
 
 	details: {
@@ -50,54 +52,44 @@ const CoinData = ({ data }) => {
 		if (data) {
 			return (
 
-				<Card className={classes.root} >
-				<Box className={classes.details}>
-
-					<Card className={classes.dataCard}>
-						<CardContent borderBottom={1} >
+				<Card className={classes.root} variant="outlined" >
+					<CardContent >
+						<Box className={classes.dataBox} borderBottom={1}>
 							<Typography variant="h6">Market Cap</Typography>
 							<Typography>{data.market_cap}</Typography>
-						</CardContent>
-						</Card>
+						</Box>
 
-						<Card className={classes.dataCard}>
-						<CardContent borderBottom={1}  >
+						<Box className={classes.dataBox} borderBottom={1}>
 							<Typography variant="h6">Volume</Typography>
 							<Typography>{data.total_volume}</Typography>
-						</CardContent>
-						</Card>
-						
+						</Box>
 
-						<Card className={classes.dataCard}>
-						<CardContent borderBottom={1}  >
+						<Box className={classes.dataBox} borderBottom={1}>
 							<Typography variant="h6">Total Supply</Typography>
 							<Typography>{data.total_supply}</Typography>
-						</CardContent>
-						</Card>
+						</Box>
 
-
-						<Card className={classes.dataCard}>
-						<CardContent borderBottom={1}  >
-							<Typography variant="h6">High 24HR</Typography>
-							<Typography>{data.high_24h}</Typography>
-						</CardContent>
-						</Card>
-
-						<Card className={classes.dataCard}>
-						<CardContent borderBottom={1}  >
+						<Box className={classes.dataBox} borderBottom={1}>
 							<Typography variant="h6">Circulating Supply</Typography>
 							<Typography>{data.circulating_supply}</Typography>
-						</CardContent>
-						</Card>
+						</Box>
 
-						<Card className={classes.dataCard}>
-						<CardContent borderBottom={1}  >
-							<Typography variant="h6">Low 24HR</Typography>
+						<Box className={classes.dataBox} borderBottom={1}>
+							<Typography variant="h6">High 24HR</Typography>
+							<Typography>{data.high_24h}</Typography>
+						</Box>
+
+						<Box className={classes.dataBox} borderBottom={1}>
+							<Typography variant="h6">High 24HR</Typography>
+							<Typography>{data.high_24h}</Typography>
+						</Box>
+
+						<Typography variant="h6">Low 24HR</Typography>
 							<Typography>{data.low_24h}</Typography>
-						</CardContent>
-						</Card>
-					</Box>
+
+					</CardContent>
 				</Card>
+
 			);
 		}
 	};
