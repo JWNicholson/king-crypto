@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 const useStyles = makeStyles(() => ({
 	root: {
 		margin: "2rem auto",
-		width:"330px",
+		width:"368px",
 		
 	},
 	content: {

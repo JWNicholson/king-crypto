@@ -18,11 +18,11 @@ const useStyles= makeStyles((theme) => ({
     display:"flex",
     flexDirection:"column",
     alignItems:"center",
+    margin:"auto",
   },
   chartControls:{
     display:"flex",
     flexDirection:"column",
-    
   }
 }));
 
