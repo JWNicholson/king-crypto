@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Card, CardContent, Grid, Typography } from '@material-ui/core';
+import { Box, Card, CardContent, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(() => ({
 	root: {
 		margin: "2rem auto",
-		width:"368px",
+		width:"330px",
 		
 	},
 	content: {

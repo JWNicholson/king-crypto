@@ -5,13 +5,7 @@ import { historyOptions } from '../../chartConfig/chartConfig';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles= makeStyles((theme) => ({
-  // root: {
-  //     margin:"auto 0",
-  //     padding:"8px",
-  //     background:"#f8f8ff",
-  //     borderRadius:"4px",
-   
-  // },
+ 
   paper: {
     background:"#f8f8ff",
     padding:"16px",

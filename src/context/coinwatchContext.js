@@ -11,8 +11,14 @@ export const CoinWatchContextProvider = props => {
         }));
     }
 
+    const addCoin = (coin) => {
+        if (coinWatch.indexOf(coin) === -1){
+            setCoinWatch([...coinWatch, coin]);
+        }
+    }
+
     return(
-        <CoinWatchContext.Provider value={{coinWatch,deleteCoin}}>
+        <CoinWatchContext.Provider value={{coinWatch,deleteCoin,addCoin}}>
             {props.children}
         </CoinWatchContext.Provider>
     );
