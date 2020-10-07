@@ -7,8 +7,28 @@ I needed to get a handle on making asynchronous api requsets,and in particulary 
 ## Build Status
 Working app, open to additional features. 
 
-Example Code
-{...put some code here...}
+## The Context code
+export const CoinWatchContextProvider = props => {
+    const [coinWatch, setCoinWatch] = useState(["bitcoin", "tether", "ethereum"]);
+
+    const deleteCoin = (coin) => {
+        setCoinWatch(coinWatch.filter(el => {
+            return el !== coin;
+        }));
+    }
+
+    const addCoin = (coin) => {
+        if (coinWatch.indexOf(coin) === -1){
+            setCoinWatch([...coinWatch, coin]);
+        }
+    }
+
+    return(
+        <CoinWatchContext.Provider value={{coinWatch,deleteCoin,addCoin}}>
+            {props.children}
+        </CoinWatchContext.Provider>
+    );
+}
 
 ###### Tech Stack
 React js 
