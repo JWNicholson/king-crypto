@@ -57,5 +57,5 @@ border radius 6px;
 Landing page h1 - italic
 
 ###### Notes & Attributions
-https://blockgeeks.com/guides/what-is-cryptocurrency/
-https://finbold.com/guide/best-crypto-data-portals-to-master-bitcoin-and-cryptocurrencies/
+- https://blockgeeks.com/guides/what-is-cryptocurrency/
+- https://finbold.com/guide/best-crypto-data-portals-to-master-bitcoin-and-cryptocurrencies/
