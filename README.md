@@ -27,8 +27,7 @@ export const CoinWatchContextProvider = props => {
         <CoinWatchContext.Provider value={{coinWatch,deleteCoin,addCoin}}>
             {props.children}
         </CoinWatchContext.Provider>
-    );
-}
+    );}
 
 ###### Tech Stack
 React js 
