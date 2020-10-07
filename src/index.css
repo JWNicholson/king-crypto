@@ -59,13 +59,27 @@ body {
 
 .app {
 	background: #141414;
-	padding: 0.2em;
+	padding:1rem 0.2em;
     height: 100vh;
 	color:#f8f8ff;
 }
 
 a:visited {
 	color:#141414;
+}
+
+h1{
+	color:#a67c00;
+	font-size: 1.4rem;
+}
+
+.header {
+	display:flex;
+}
+
+.headerIcon a {
+	color:#a67c00;
+	font-size: 1.4rem;
 }
 
 
