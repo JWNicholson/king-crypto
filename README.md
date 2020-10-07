@@ -46,15 +46,13 @@ Axios
 Chart.js
 
 ###### Style Guide:
-body background,font -  #141414
-main background, h1 text-shadow - #bce4e2 ||rgb(188, 228, 226)
-content background - #f5f5f5
-h1 - #a67c00
-borders - #778899
-
-font -Roboto
-border radius 6px;
-Landing page h1 - italic
+- body background,font -  #141414
+- main background, h1 text-shadow - #bce4e2 ||rgb(188, 228, 226)
+- content background - #f5f5f5
+- h1 - #a67c00
+- borders - #778899
+- font -Roboto
+- border radius 6px;
 
 ###### Notes & Attributions
 - https://blockgeeks.com/guides/what-is-cryptocurrency/
