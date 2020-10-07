@@ -33,17 +33,17 @@ export const CoinWatchContextProvider = props => {
   ```
 
 ###### Tech Stack
-React js 
-Create React App
-HTML5
-CSS3
-Flexbox via Material UI
+- React js 
+- Create React App
+- HTML5
+- CSS3
+- Flexbox via Material UI
 
 ###### Dependencies
-React Router
-React Multi Select Component
-Axios
-Chart.js
+- React Router
+- React Multi Select Component
+- Axios
+- Chart.js
 
 ###### Style Guide:
 - body background,font -  #141414
