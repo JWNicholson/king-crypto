@@ -1,5 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {  Box, Typography, makeStyles } from '@material-ui/core';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -17,11 +20,15 @@ const Header = () => {
         <header className={classes.header}>
             <Box 
                 display="flex"
-                justifyContent="center"   
+                justifyContent="space-evenly"   
             >
-            <Typography  variant="h3" component="h1" gutterBottom>
+               
+                <HomeOutlinedIcon />
+               
+            <Typography  variant="h4" component="h1" gutterBottom>
                King Crypto
-           </Typography>  
+           </Typography>
+           
             </Box>
         </header>
     )

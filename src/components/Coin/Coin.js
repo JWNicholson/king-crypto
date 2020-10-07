@@ -8,7 +8,7 @@ import { Box, Card, CardContent, makeStyles, Typography, } from '@material-ui/co
 
 const useStyles = makeStyles(() => ({
     root: {
-        marginTop: "2rem"
+        margin: "1rem auto"
     },
     content: {
         flex: '1 0 auto',

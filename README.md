@@ -1,29 +1,29 @@
-King Crypto
-King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies.
+### King Crypto
+King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies. Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just funcitionality.
 
-WHY?
-I needed to get a handle on making asynchronous api requsets,and in particulary ones whose functionality depends on a different request's information.
+## WHY?
+I needed to get a handle on making asynchronous api requsets,and in particulary ones whose functionality depends on a different request's information. I decided to use React's useContext hook for data that was shared or relied on previous api calls. Redux seemed a little much for this app in it's current state.
 
-Build Status
-Working app, open to additional features.
+## Build Status
+Working app, open to additional features. 
 
 Example Code
 {...put some code here...}
 
-Tech Stack
+###### Tech Stack
 React js 
 Create React App
 HTML5
 CSS3
 Flexbox via Material UI
 
-Dependencies
+###### Dependencies
 React Router
 React Multi Select Component
 Axios
 Chart.js
 
-Style Guide:
+###### Style Guide:
 body background,font -  #141414
 main background, h1 text-shadow - #bce4e2 ||rgb(188, 228, 226)
 content background - #f5f5f5
@@ -34,6 +34,6 @@ font -Roboto
 border radius 6px;
 Landing page h1 - italic
 
-Notes & Attributions
+###### Notes & Attributions
 https://blockgeeks.com/guides/what-is-cryptocurrency/
 https://finbold.com/guide/best-crypto-data-portals-to-master-bitcoin-and-cryptocurrencies/
