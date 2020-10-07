@@ -8,6 +8,7 @@ I needed to get a handle on making asynchronous api requsets,and in particulary 
 Working app, open to additional features. 
 
 ## The Context code
+```
 export const CoinWatchContextProvider = props => {
     const [coinWatch, setCoinWatch] = useState(["bitcoin", "tether", "ethereum"]);
 
@@ -27,7 +28,9 @@ export const CoinWatchContextProvider = props => {
         <CoinWatchContext.Provider value={{coinWatch,deleteCoin,addCoin}}>
             {props.children}
         </CoinWatchContext.Provider>
-    );}
+    );
+  }
+  ```
 
 ###### Tech Stack
 React js 
