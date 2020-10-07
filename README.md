@@ -1,5 +1,10 @@
 # King Crypto
-King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies.The landing page shows a default 3 coins. You can add more with the dropdown select. The list is hard-coded rather than dynamically, as there are around 1,000 coins. You can also delete coins. There is a safety feature which prevents you from adding a coin that is already in the least. This is accomlished by checking the users coin selection's index to see if it is already there.
+King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies.The landing page shows a default 3 coins. You can add more with the dropdown select. The list is hard-coded rather than dynamically, as there are around 1,000 coins. You can also delete coins. There is a safety feature which prevents you from adding a coin that is already in the least. This is accomplished by checking the users coin selection's index to see if it is already there.
+##### Key Takaways
+- Add or delete coins
+- Clicking on coin data takes you to more detailed information and a chart
+- Chart has 3 dfferent time frame options
+- local storage is used to remember users coin watch list
 
 Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just funcitionality.
 
@@ -11,12 +16,20 @@ I needed to get a handle on making asynchronous api requsets,and in particulary 
 ## Build Status
 Working app, open to additional features. 
 
-## The Context code
+### Context & local storage code
 ```
+import React, { createContext, useState, useEffect } from 'react';
+
+export const CoinWatchContext = createContext();
+
 export const CoinWatchContextProvider = props => {
     const [coinWatch, setCoinWatch] = useState(["bitcoin", "tether", "ethereum"]);
 
-    const deleteCoin = (coin) => {
+    useEffect(() => {
+       localStorage.setItem("coinWatch", coinWatch)
+    }, [coinWatch]);
+
+    function deleteCoin(coin) {
         setCoinWatch(coinWatch.filter(el => {
             return el !== coin;
         }));
@@ -33,7 +46,7 @@ export const CoinWatchContextProvider = props => {
             {props.children}
         </CoinWatchContext.Provider>
     );
-  }
+}
   ```
 
 ###### Tech Stack
