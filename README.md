@@ -1,5 +1,7 @@
-### King Crypto
+# King Crypto
 King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies. Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just funcitionality.
+
+![app-example](https://github.com/JWNicholson/king-crypto/blob/master/assets/King_Crypto-screenshots-md.png?raw=true)
 
 ## WHY?
 I needed to get a handle on making asynchronous api requsets,and in particulary ones whose functionality depends on a different request's information. I decided to use React's useContext hook for data that was shared or relied on previous api calls. Redux seemed a little much for this app in it's current state.
