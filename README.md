@@ -1,5 +1,7 @@
 # King Crypto
-King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies.The landing page shows a default 3 coins. You can add more with the dropdown select. The list is hard-coded rather than dynamically, as there are around 1,000 coins. Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just funcitionality.
+King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can see current and historical data for selected currencies.The landing page shows a default 3 coins. You can add more with the dropdown select. The list is hard-coded rather than dynamically, as there are around 1,000 coins. You can also delete coins. There is a safety feature which prevents you from adding a coin that is already in the least. This is accomlished by checking the users coin selection's index to see if it is already there.
+
+Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just funcitionality.
 
 ![app-example](https://github.com/JWNicholson/king-crypto/blob/master/assets/King_Crypto-screenshots-md.png?raw=true)
 
