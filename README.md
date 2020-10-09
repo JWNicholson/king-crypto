@@ -6,7 +6,7 @@ King Crypto is a crypto currency tracking app. Using Coin Gecko's API, you can s
 - Chart has 3 dfferent time frame options
 - local storage is used to remember users coin watch list
 
-Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just funcitionality.
+Due to time restraints the app is designed with only iPhone screen sizes in mind. I wasn't concerned with design, just functionality.
 
 ![app-example](https://github.com/JWNicholson/king-crypto/blob/master/assets/King_Crypto-screenshots-md.png?raw=true)
 
